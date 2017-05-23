@@ -29,7 +29,7 @@
 
     <bool name="config_automatic_brightness_available">true</bool>
 
-    <integer-array name="config_autoBrightnessLevels">
+    <integer-array name="config_autoBrightnessLevels">f
         <item>10</item>
         <item>200</item>
         <item>320</item>
