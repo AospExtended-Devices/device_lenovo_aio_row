@@ -29,8 +29,9 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 PRODUCT_AAPT_CONFIG := normal xhdpi xxhdpi
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
-# Hack for building without kernel sources
-#$(shell mkdir -p $(OUT)/obj/KERNEL_OBJ/usr)
+# Boot animation
+TARGET_SCREEN_WIDTH := 720
+TARGET_SCREEN_HEIGHT := 1280
 
 # Device product elements
 include $(LOCAL_PATH)/product/*.mk

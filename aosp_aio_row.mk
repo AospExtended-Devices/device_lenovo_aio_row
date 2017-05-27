@@ -35,9 +35,3 @@ PRODUCT_MANUFACTURER := Lenovo
 DEFAULT_ROOT_METHOD := magisk
 EXTENDED_BUILD_TYPE=OFFICIAL
 WITH_CM_CHARGER=true
-
-# Boot animation
-TARGET_SCREEN_WIDTH := 720
-TARGET_SCREEN_HEIGHT := 1280
-
-$(call inherit-product-if-exists, vendor/lenovo/aio_row/aio_row-vendor.mk)
