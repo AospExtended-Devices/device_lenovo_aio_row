@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2015 The CyanogenMod Project
+# Copyright (c) 2017 AospExtended Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -29,9 +29,10 @@ $(call inherit-product, vendor/aosp/common.mk)
 PRODUCT_DEVICE := aio_row
 PRODUCT_NAME := aosp_aio_row
 PRODUCT_BRAND := Lenovo
-PRODUCT_MODEL := A7000-a
+PRODUCT_MODEL := Lenovo A7000-a
 PRODUCT_MANUFACTURER := Lenovo
 
+# AEX-ify stuffs
 DEFAULT_ROOT_METHOD := magisk
 EXTENDED_BUILD_TYPE=OFFICIAL
 WITH_CM_CHARGER=true

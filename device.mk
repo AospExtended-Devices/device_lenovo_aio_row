@@ -1,7 +1,5 @@
-
-
 #
-# Copyright 2017 The LineageOS Project
+# Copyright (c) 2017 AospExtended Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -28,10 +26,6 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal xhdpi xxhdpi
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
-
-# Boot animation
-TARGET_SCREEN_WIDTH := 720
-TARGET_SCREEN_HEIGHT := 1280
 
 # Device product elements
 include $(LOCAL_PATH)/product/*.mk
@@ -63,9 +57,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.service.debuggable=1 \
     persist.sys.root_access=0 \
     ro.sys.fw.bg_apps_limits=5
-
-#PRODUCT_COPY_FILES := \
-    $(LOCAL_KERNEL):kernel 
 
 
 # Dalvik/HWUI

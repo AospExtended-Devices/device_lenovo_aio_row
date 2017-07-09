@@ -10,9 +10,6 @@
 # Meta/Factory Mode multi_init
 /sbin/multi_init		u:object_r:init_exec:s0
 
-# Magisk
-/magisk(/.*)?                                                         u:object_r:system_file:s0
- 
 
 #############################
 # Data files
@@ -353,6 +350,7 @@
 /dev/tz_vfs		u:object_r:teei_vfs_device:s0
 /dev/emmcrpmb0		u:object_r:teei_rpmb_device:s0
 /dev/teei_fp		u:object_r:teei_fp_device:s0
+/dev/tfa9897(/.*)?	u:object_r:tfa9897_device:s0
 
 #############################
 # sysfs files
@@ -410,7 +408,7 @@
 /system/bin/fuelgauged u:object_r:fuelgauged_exec:s0
 /system/bin/ged_srv u:object_r:ged_srv_exec:s0
 /system/bin/gas_srv    u:object_r:gas_srv_exec:s0
-/system/bin/kpoc_charger                                        u:object_r:kpoc_charger_exec:s0
+/system/bin/kpoc_charger u:object_r:kpoc_charger_exec:s0
 /system/bin/geomagneticd u:object_r:geomagneticd_exec:s0
 /system/bin/GoogleOtaBinder u:object_r:GoogleOtaBinder_exec:s0
 /system/bin/gsm0710muxdmd2 u:object_r:gsm0710muxdmd2_exec:s0
