@@ -24,6 +24,7 @@ TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
 # Asserts
 TARGET_OTA_ASSERT_DEVICE := aio_row,A7000-a
 
+# Board Configuration
 include $(LOCAL_PATH)/board/*.mk
 
 # Block based ota
