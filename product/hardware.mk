@@ -27,7 +27,10 @@ PRODUCT_PACKAGES += \
     libgui_ext \
     libui_ext \
     libmtk_symbols \
-    libwvmsym \
+    libwvmsym
+
+# MTK EngineerMode
+PRODUCT_PACKAGES += \
     EngineerMode
 
 PRODUCT_PROPERTY_OVERRIDES += \

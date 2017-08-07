@@ -1,5 +1,5 @@
 #
-# Copyright (c) 2017 AospExtended Project
+# Copyright (c) 2017 - Rohan Taneja
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -24,7 +24,6 @@ TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
 # Asserts
 TARGET_OTA_ASSERT_DEVICE := aio_row,A7000-a
 
-# Board Configuration
 include $(LOCAL_PATH)/board/*.mk
 
 # Block based ota
@@ -47,9 +46,8 @@ EXTENDED_FONT_FOOTPRINT := true
 # Configure jemalloc for low memory
 MALLOC_SVELTE := true
 
-# RIL
-BOARD_PROVIDES_RILD := true
-BOARD_RIL_CLASS := ../../../device/lenovo/aio_row/ril
+# Preload Library
+TARGET_LDPRELOAD += libmtk_symbols.so
 
 # System.prop
 TARGET_SYSTEM_PROP := $(LOCAL_PATH)/system.prop

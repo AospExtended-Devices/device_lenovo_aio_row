@@ -11,7 +11,7 @@ endif
 
 # Hack for building without kernel sources
 $(shell mkdir -p $(OUT)/obj/KERNEL_OBJ/usr)
+$(shell touch $(OUT)/obj/KERNEL_OBJ/usr/export_includes)
 
-# Prebuilt Kernel
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel

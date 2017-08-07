@@ -1,5 +1,5 @@
 #
-# Copyright (c) 2017 AospExtended Project
+# Copyright (c) 2017 - Rohan Taneja
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,10 +14,8 @@
 # limitations under the License.
 #
 
-# The gps config appropriate for this device
-$(call inherit-product, device/common/gps/gps_as_supl.mk)
-
-$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
+# Inherit aio_row's vendor blobs
+$(call inherit-product-if-exists, vendor/lenovo/aio_row/aio_row-vendor.mk)
 
 LOCAL_PATH := device/lenovo/aio_row
 
@@ -34,20 +32,18 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 
 # default.prop
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    ro.adb.secure=0 \
-    ro.secure=0 \
     camera.disable_zsl_mode=1 \
-    dalvik.vm.dex2oat-Xms=64m \
-    dalvik.vm.dex2oat-Xmx=512m \
-    dalvik.vm.image-dex2oat-Xms=64m \
-    dalvik.vm.image-dex2oat-Xmx=64m \
     persist.service.acm.enable=0 \
     persist.sys.usb.config=mtp,adb \
-    ro.allow.mock.location=0 \
     ro.config.low_ram=false \
-    ro.debuggable=1 \
     ro.dalvik.vm.native.bridge=0 \
-    ro.mount.fs=EXT4
+    ro.mount.fs=EXT4 \
+
+ADDITIONAL_DEFAULT_PROPERTIES += \
+	ro.secure=0 \
+	ro.allow.mock.location=1 \
+	ro.debuggable=1 \
+	ro.adb.secure=0 \
 
 # build.prop
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -55,12 +51,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
     media.stagefright.less-secure=true \
     persist.service.adb.enable=1 \
     persist.service.debuggable=1 \
-    persist.sys.root_access=0 \
-    ro.sys.fw.bg_apps_limits=5
+    persist.sys.root_access=3
 
+# extra log controls prop
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.ril.log=0 \
+    ro.disable.xlog=0
 
 # Dalvik/HWUI
-$(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
-
-# Vendor
-$(call inherit-product, vendor/lenovo/aio_row/aio_row-vendor.mk)
+$(call inherit-product-if-exists, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
+$(call inherit-product-if-exists, frameworks/native/build/phone-xhdpi-2048-hwui-memory.mk)

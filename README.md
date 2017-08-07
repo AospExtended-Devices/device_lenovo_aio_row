@@ -1,51 +1,58 @@
-Lenovo A7000-a - Device Tree Configuration (aio_row)
+Copyright (c) 2017 - Rohan Taneja
+
+Device configuration for Lenovo A7000-a
 ==============
+Lenovo A7000-a (codenamed _"aio_row"_) is mid-range budget smartphone from Lenovo.
 
-This branch is for building 7.x based ROMs.
+Lenovo A7000-a was announced in March 2015. Release date was April 2015.
 
-![Lenovo A7000-a](https://1.bp.blogspot.com/-Bi3y-tnLrdw/VzyVpZgjqEI/AAAAAAAAAgw/f-K2t1MDmjID056U9iHKCfSxqnk-rItBgCLcB/s400/dareaosp.png "AOSP on Lenovo A7000-a")
+## Device specifications
 
+| Device       | Lenovo A7000-a		                         |
+| -----------: | :---------------------------------------------- |
+| SoC          | Mediatek MT6752m                                |
+| CPU          | Octa-core 1.5 GHz Cortex-A53                    |
+| GPU          | Mali-T760MP2                                    |
+| Memory       | 2 GB RAM                                        |
+| Shipped Android version | 5.0.2                                |
+| Storage      | 8 GB, expandable upto 32 GB                     |
+| Battery      | Removable Li-Po 2900 mAh                        |
+| Rear camera  | 8 MP, f/2.2, autofocus, dual-LED flash          |
+| Front camera | 5 MP, 720p                                      |
 
-### Specifications:
-Basic   | Spec Sheet
--------:|:-------------------------
-CPU     | 1.5GHz 64-bit Octa-Core MT6752
-GPU     | Mali-T760MP2
-Memory  | 2GB RAM
-Shipped Android Version | 5.0.2, 6.0
-Storage | 8GB
-Display | 5.5" IPS 1280 x 720 px
-Camera  | 8MPx, LED Flash
+This branch is for building LineageOS-14.1 based ROMs.
 
-### Working:
-  - Wi-Fi
-  - Wi-Fi tethering (ap0 interface)
-  - RIL (SMS/calls/internet/LTE)
-  - GPS
-  - Bluetooth
-  - AGPS
-  - Vibration
-  - Audio
-  - Auto brightness
-  - Rotation
-  - All sensors
-  - Flashlight
-  - Camera (with rear/front camera)
-  - Video Recorder
-  - Camera
-  - Micro SD support
-  - MTP 
-  - LED Notifications (customizable)
-  - FM Radio
-  - Offline Charging
+## Device picture
+![Lenovo A7000-a](https://i0.wp.com/Www.HalabTech.com/wp-content/uploads/2016/06/lenovo-a700-a.jpg?fit=700%2C350&ssl=1 "Lenovo A7000-a Black")
 
 ### Other resource:
-  - Kernel: 3.10.107 (Daredevil-S) https://github.com/rohantaneja/daredevil-kernel
-  - Vendor blobs: https://github.com/rohantaneja/android_vendor_lenovo_mt6752
+  - Kernel: 3.10.x (Daredevil-S) https://github.com/rohantaneja/daredevil-kernel
+  - HALs: https://github.com/rohantaneja/android_hardware_lenovo_aio_row
+  - Vendor blobs: https://github.com/rohantaneja/proprietary_vendor_lenovo
 
 ### Credits:
   - rohantaneja
   - xakep1993 (initial steps towards nougat)
   - daniel_hk (all his detailed guidelines and sources)
-  - mohancm100
   - Compilers United (incl. tanish2k09, aryankedare, aswinp222, HDHR)
+
+### Tested Features:
+  - [x] Wi-Fi
+  - [x] RIL (SMS/calls/internet/LTE)
+  - [x] USB Tethering
+  - [x] Wi-Fi Tethering
+  - [x] GPS, AGPS
+  - [x] Bluetooth
+  - [x] Vibration
+  - [x] Audio
+  - [x] Auto brightness
+  - [x] Rotation
+  - [x] Hardware sensors
+  - [x] Flashlight
+  - [x] Camera (with rear/front camera)
+  - [x] Video Recorder
+  - [x] External SD Card
+  - [x] MTP 
+  - [x] LED Notifications (customizable)
+  - [x] FM Radio
+  - [x] Offline Charging
